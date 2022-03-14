@@ -1,16 +1,18 @@
 <template>
-  <v-app dark align="center">
-    <omemojiLogo />
-    <h1 v-if="error.statusCode === 404">
+  <v-card >
+  <v-app align="center" >
+    <Title-svg />
+    <h1 v-if="error.statusCode === 404" class="my-2" style="font-size:30px">
       {{ pageNotFound }}
     </h1>
     <h1 v-else>
       {{ otherError }}
     </h1>
     <NuxtLink to="/">
-      Home page
+      Home
     </NuxtLink>
   </v-app>
+  </v-card>
 </template>
 
 <script>
