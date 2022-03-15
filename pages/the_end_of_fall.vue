@@ -1,5 +1,5 @@
 <template>
-  <v-card style="padding: 15px">
+  <v-card style="padding: 12px;margin:0 0 15px">
     <v-card
       outlined
       class="d-flex justify-center"
@@ -9,13 +9,16 @@
       <v-img
         alt="title"
         src="/Artwork/the_end_of_fall.png"
-        :aspect-ratio="16 / 9"
+        :aspect-ratio="8 / 5"
         contain
       ></v-img>
     </v-card>
     <v-card-title class="justify-center">
       <h2>The end of fall</h2>
     </v-card-title>
+            <p>
+          鮮やかな赤・シアンとモノトーンの背景のコントラストをコンセプトとした作品
+        </p>
     <hr style="margin: 0 0px 15px" />
     <ul>
       <li>

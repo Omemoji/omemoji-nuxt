@@ -1,13 +1,13 @@
 <template>
-  <v-card style="padding:15px 14px; margin:20px 0">
+  <v-card style="padding: 15px 14px; margin: 0px 0 0">
     <v-card-title class="justify-center">
       <h2>Contents</h2>
     </v-card-title>
     <hr style="margin: 0 1px 15px" />
-    <v-row no-gutters >
+    <v-row no-gutters>
       <v-col v-for="n in 10" :key="n" class="d-flex child-flex" cols="4">
         <v-img
-        style="margin:1px"
+          style="margin: 1px"
           :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
           :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
           aspect-ratio="1"

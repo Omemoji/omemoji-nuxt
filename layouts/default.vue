@@ -6,86 +6,94 @@
       :clipped="clipped"
       :right="right"
       temporary
-      fixed
       app
     >
-      <v-list>
-        <v-list-item>
-          <h3>Link</h3>
-        </v-list-item>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          :href="item.href"
-          v-bind="
-            item.blank
-              ? { target: '_blank', rel: 'noopener noreferrer' }
-              : false
-          "
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon target="_blank" rel="noopener noreferrer">{{
-              item.icon
-            }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
+      <right-drawer-list />
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app color="#a40000">
-      <NuxtLink
-        class="white--text mx-4 my-7"
-        style="text-decoration: none"
-        to="/"
+    <v-navigation-drawer
+      v-if="$vuetify.breakpoint.width < left_width"
+      v-model="menu"
+      :mini-variant="miniVariant"
+      :clipped="clipped"
+      fixed
+      temporary
+      app
+    >
+      <left-drawer-list />
+      <link-drawer-list />
+    </v-navigation-drawer>
+    <v-app-bar color="#a40000" :clipped-left="clipped" fixed app>
+      <v-icon
+        v-if="$vuetify.breakpoint.width < left_width"
+        @click.stop="menu = !menu"
+        color="#ffffff"
+        class=""
+        large
+        target="_blank"
+        rel="noopener noreferrer"
       >
+        {{ "mdi-menu" }}
+      </v-icon>
+      <v-spacer v-if="$vuetify.breakpoint.width < right_width"></v-spacer>
+      <NuxtLink class="white--text" style="text-decoration: none" to="/">
         <h1>
           <v-toolbar-title style="font-size: 32px" v-text="title" />
         </h1>
       </NuxtLink>
       <v-spacer></v-spacer>
-      <v-app-bar-nav-icon
+      <v-icon
         v-if="$vuetify.breakpoint.xs"
         @click.stop="drawer = !drawer"
         color="#ffffff"
         class=""
-      />
-      <v-list class="d-flex" color="transparent" v-else>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          :href="item.href"
-          v-bind="
-            item.blank
-              ? { target: '_blank', rel: 'noopener noreferrer' }
-              : false
-          "
-          exact
-        >
-          <v-icon  target="_blank" color="white" rel="noopener noreferrer">{{
-            item.icon
-          }}</v-icon>
-        </v-list-item>
-      </v-list>
+        large
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ "mdi-apps" }}
+      </v-icon>
     </v-app-bar>
     <v-main>
-      <v-container>
-        <v-row justify="center" align="center">
-          <v-col cols="12" sm="10" style="max-width: 800px;">
+      <v-container style="padding: 0px">
+        <v-row justify="center" class="d-flex" no-gutters>
+          <v-col
+            cols="3"
+            v-if="$vuetify.breakpoint.width >= left_width"
+            app
+            style="width: 300px"
+          >
+            <v-navigation-drawer
+              permanent
+              style="padding: 6px 0px 0; margin-left: auto"
+            >
+              <left-drawer-list />
+              <link-drawer-list />
+            </v-navigation-drawer>
+          </v-col>
+          <v-col
+            app
+            class=""
+            style="padding: 12px; margin: 0px; max-width: 960px"
+          >
             <Nuxt />
             <gallery />
+          </v-col>
+          <v-col
+            cols="3"
+            v-if="$vuetify.breakpoint.width >= right_width"
+            app
+            style="width: 300px"
+          >
+            <v-navigation-drawer permanent right style="padding: 6px 0px 0">
+              <right-drawer-list />
+            </v-navigation-drawer>
           </v-col>
         </v-row>
       </v-container>
     </v-main>
     <v-footer
-      :absolute="!fixed"
       class="text-center justify-center"
+      :absolute="!fixed"
       color="#000000"
       app
     >
@@ -104,56 +112,21 @@ ul {
 
 
 <script>
-import gallery from '~/components/gallery.vue';
+import gallery from "~/components/gallery.vue";
+import LeftDrawerList from "~/components/left-drawer-list.vue";
+import LinkDrawerList from "~/components/link-drawer-list.vue";
+import RightDrawerList from "~/components/right-drawer-list.vue";
 export default {
-  components: { gallery },
+  components: { gallery, LeftDrawerList, LinkDrawerList, RightDrawerList },
   name: "DefaultLayout",
   data() {
     return {
       clipped: false,
       drawer: false,
+      menu: false,
       fixed: false,
-      items: [
-        {
-          icon: "mdi-home",
-          title: "Home",
-          to: "/",
-        },
-        {
-          icon: "mdi-twitter",
-          title: "Twitter",
-          href: "https://twitter.com/omemoji_itf",
-          blank: true,
-        },
-        {
-          icon: "mdi-instagram",
-          title: "Instagram",
-          href: "https://www.instagram.com/omemoji/",
-          blank: true,
-        },
-        {
-          icon: "mdi-github",
-          title: "GitHub",
-          href: "https://github.com/Omemoji",
-          blank: true,
-        },
-        {
-          icon: "mdi-youtube",
-          title: "YouTube",
-          href: "https://www.youtube.com/channel/UCe1R2Wcu50u9Nm_HkZO6llA",
-          blank: true,
-        },
-        {
-          icon: "mdi-brush",
-          title: "The end of fall",
-          to: "/the_end_of_fall",
-        },
-        {
-          icon: "mdi-alert-circle",
-          title: "Error test",
-          to: "/error",
-        },
-      ],
+      left_width: 900,
+      right_width: 1400,
       miniVariant: false,
       right: true,
       rightDrawer: false,

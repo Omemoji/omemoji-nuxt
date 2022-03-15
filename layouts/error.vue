@@ -1,6 +1,5 @@
 <template>
-  <v-card >
-  <v-app align="center" >
+  <v-card align=center style="margin:0 0 15px;padding:15px;" >
     <Title-svg />
     <h1 v-if="error.statusCode === 404" class="my-2" style="font-size:30px">
       {{ pageNotFound }}
@@ -11,7 +10,6 @@
     <NuxtLink to="/">
       Home
     </NuxtLink>
-  </v-app>
   </v-card>
 </template>
 
