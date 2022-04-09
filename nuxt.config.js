@@ -1,6 +1,7 @@
 import colors from "vuetify/es5/util/colors";
 const artworksList = require('./data/artworks.json')
 export default {
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s - 創作物紹介",
@@ -47,6 +48,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
+    '@nuxtjs/google-gtag',
     "@nuxtjs/axios",
   ],
 
@@ -54,6 +56,10 @@ export default {
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: "/",
+  },
+  'google-gtag': {
+    id: "G-XEDJELQWHL",
+    debug: true, 
   },
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

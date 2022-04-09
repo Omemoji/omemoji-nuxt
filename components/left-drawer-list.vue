@@ -1,5 +1,5 @@
 <template>
-  <v-list app style="padding: 8px 0 0 0">
+  <v-list app style="padding: 16px 0 0 0">
     <v-list-item style="margin: 0" class="d-flex justify-center">
       <v-img alt="omemoji" v-bind:src="omemoji_icon" style="max-width: 200px">
       </v-img>

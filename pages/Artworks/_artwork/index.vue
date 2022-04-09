@@ -44,5 +44,40 @@ export default {
       return artwork[0];
     },
   },
+  head() {
+    const artwork = this.$store.getters["json/getArtwork"].filter((artwork) => {
+      return artwork.id === this.$route.params.artwork;
+    });
+    return {
+      titleTemplate: "%s - 創作物紹介",
+      title: artwork[0].title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:artwork[0].caption,
+        },
+        {
+          hid: "og:site_name",
+          property: "og:site_name",
+          content: "創作物紹介",
+        },
+        { hid: "og:type", property: "og:type", content: "website" },
+        { hid: "og:url", content: "https://www.omemoji.dev/"+`${this.$route.path}` },
+        { hid: "og:title", property: "og:title", content: artwork[0].title+" - 創作物紹介" },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: artwork[0].caption,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: "https://www.omemoji.dev/omemoji_square.png",
+        },
+        { name: "twitter:card", content: "summary" },
+      ],
+    };
+  },
 };
 </script>

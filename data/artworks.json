@@ -4,14 +4,14 @@
     "image": "/Artwork/rainbow_dragon.png",
     "title": "虹龍",
     "tool": "krita",
-    "caption": "虹色の龍"
+    "caption": "極彩色の龍"
   },
   {
     "id": "harvest",
     "image": "/Artwork/harvest.png",
     "title": "やまぶどう",
     "tool": "krita",
-    "caption": "やまぶどうをカラスが食べようとしているところ"
+    "caption": "秋のやまぶどうとカラス"
   },
   {
     "id": "2022",
@@ -25,55 +25,55 @@
     "image": "/Artwork/sword_angel.png",
     "title": "剣神",
     "tool": "krita",
-    "caption": "神という割にジャージを着用するなどかなり世俗的である"
+    "caption": "虹の剣を持つ神"
   },
   {
     "id": "tower_girl",
     "image": "/Artwork/tower_girl.png",
     "title": "鉄塔少女",
     "tool": "Inkscape",
-    "caption": "鉄塔を右奥にもう一つ描いた方が良かったかも知れない"
+    "caption": "夕暮れの鉄塔に佇む少女"
   },
   {
     "id": "the_end_of_fall",
     "image": "/Artwork/the_end_of_fall.png",
     "title": "The end of fall",
     "tool": "Inkscape",
-    "caption": "紅葉の赤と湖面のシアンのコントラストを描きたかった"
+    "caption": "紅葉と透き通った湖面"
   },
   {
     "id": "RGBdragon",
     "image": "/Artwork/RGBdragon.png",
     "title": "RGBdragon",
     "tool": "Inkscape",
-    "caption": "背景の和紙のようなテクスチャはPhotoshopで簡単に作ることができる"
+    "caption": "光の三原色に彩られた龍"
   },
   {
     "id": "skyblue",
     "image": "/Artwork/skyblue.png",
     "title": "skyblue",
     "tool": "Adobe Illustrator",
-    "caption": "クジラの腹の線を五線譜に見立てるところから着想を広げた"
+    "caption": "音楽を奏でるクジラと少女"
   },
   {
     "id": "asoblock_dragon",
     "image": "/Artwork/asoblock_dragon.jpg",
     "title": "自在龍",
     "tool": "アソブロック",
-    "caption": "可動性と強度を両立する（多分）オリジナルの方法を用いている"
+    "caption": "アソブロックで作成した龍"
   },
   {
     "id": "dragonfly",
     "image": "/Artwork/dragonfly.jpeg",
     "title": "トンボ型ロボット",
     "tool": "ボールペン",
-    "caption": "スタイリッシュかつ愛嬌のあるデザインを目指した"
+    "caption": "トンボ型ロボット"
   },
   {
     "id": "blazing_leaves",
     "image": "/Artwork/blazing_leaves.jpeg",
     "title": "Blazing leaves",
     "tool": "アクリルガッシュ",
-    "caption": "高校生国際美術展に応募したが、特に表彰などはされなかった"
+    "caption": "高校生国際美術展に応募したもの"
   }
 ]
