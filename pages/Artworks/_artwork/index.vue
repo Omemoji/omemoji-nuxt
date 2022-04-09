@@ -12,9 +12,6 @@
       <v-card-title class="justify-center">
         <h2>{{ artwork.title }}</h2>
       </v-card-title>
-      <p>
-        {{ artwork.caption }}
-      </p>
       <hr class="mb-3" />
       <ul class="pa-0">
         <li>
@@ -25,6 +22,10 @@
           <h3>Tools</h3>
           <p>{{ artwork.tool }}</p>
         </li>
+        <li>
+          <h3>Description</h3>
+          <p>{{ artwork.caption }}</p>
+        </li>
       </ul>
     </v-card>
   </v-card>
@@ -34,11 +35,13 @@
 export default {
   computed: {
     artwork() {
-      
-      const artwork = this.$store.getters["json/getArtwork"].filter(item => {
-        return item.id === this.$route.params.item
-      })
-
+      console.log(this.$route.params.artwork);
+      const artwork = this.$store.getters["json/getArtwork"].filter(
+        (artwork) => {
+          return artwork.id === this.$route.params.artwork;
+        }
+      );
+      return artwork[0];
     },
   },
 };

@@ -1,4 +1,4 @@
-import jsonData from '@/data/artworks.json'
+import jsonData from '~/data/artworks.json'
 
 // 状態の管理
 export const state = () => ({

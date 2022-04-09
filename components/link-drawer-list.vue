@@ -1,9 +1,5 @@
 <template>
-  <v-list>
-    <v-list-item class="justify-center" >
-      <h2>Link</h2>
-    </v-list-item>
-        <hr>
+  <v-list app style="padding: 0">
     <v-list-item
       v-for="(item, i) in items"
       :key="i"
@@ -24,7 +20,6 @@
         <v-list-item-title v-text="item.title" />
       </v-list-item-content>
     </v-list-item>
-
   </v-list>
 </template>
 

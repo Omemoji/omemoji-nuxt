@@ -10,9 +10,9 @@
         :key="i"
         class="d-flex child-flex"
         cols="4"
-        ><nuxt-link :to="'Artworks/'+artwork.id" style="margin: 1px">
+        ><nuxt-link :to="'/Artworks/' + artwork.id" style="margin: 1px">
           <nuxt-img
-            quality="40"
+            quality="30"
             style="aspect-ratio: 1; object-fit: cover; width: 100%"
             :src="artwork.image"
             class="grey lighten-2 float-left"

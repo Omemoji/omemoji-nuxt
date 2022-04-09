@@ -4,15 +4,23 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s - 創作物紹介",
-    title: "創作物紹介",
+    title: "Home",
     htmlAttrs: {
       lang: "en",
+      prefix: 'og: http://ogp.me/ns#'
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
+      { hid: "description", name: "description", content: 'omemojiのポートフォリオ' },
+      { hid: 'og:site_name', property: 'og:site_name', content: '創作物紹介' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', content: 'https://www.omemoji.dev/' },
+      { hid: 'og:title', property: 'og:title', content: '創作物紹介' },
+      { hid: 'og:description', property: 'og:description', content: 'omemojiのポートフォリオ' },
+      { hid: 'og:image', property: 'og:image', content: 'https://www.omemoji.dev/omemoji_square.png' },
+      { name: 'twitter:card', content: 'summary' }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
@@ -78,8 +86,8 @@ export default {
   build: {},
   generate: {
     routes() {
-      return artworksList.artworks.map(item => {
-        return `Artworks/${item.id}`
+      return artworksList.map(item => {
+      return `Artworks/${item.id}`
       })
     }
   }

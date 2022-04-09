@@ -1,37 +1,79 @@
 [
-    {
-      "id": "rainbow_dragon",
-      "image": "/Artwork/rainbow_dragon.png",
-      "title": "虹龍",
-      "tool": "krita",
-      "caption": "a"
-    },
-    {
-      "id": "harvest",
-      "image": "/Artwork/harvest.png",
-      "title": "やまぶどう",
-      "tool": "krita",
-      "caption": "a"
-    },
-    {
-      "id": "sword_angel",
-      "image": "/Artwork/sword_angel.png",
-      "title": "剣神",
-      "tool": "krita",
-      "caption": "a"
-    },
-    {
-      "id": "tower_girl",
-      "image": "/Artwork/tower_girl.png",
-      "title": "鉄塔少女",
-      "tool": "Inkscape",
-      "caption": "a"
-    },
-    {
-      "id": "the_end_of_fall",
-      "image": "/Artwork/the_end_of_fall.png",
-      "title": "The end of fall",
-      "tool": "Inkscape",
-      "caption": "a"
-    }
-  ]
+  {
+    "id": "rainbow_dragon",
+    "image": "/Artwork/rainbow_dragon.png",
+    "title": "虹龍",
+    "tool": "krita",
+    "caption": "虹色の龍"
+  },
+  {
+    "id": "harvest",
+    "image": "/Artwork/harvest.png",
+    "title": "やまぶどう",
+    "tool": "krita",
+    "caption": "やまぶどうをカラスが食べようとしているところ"
+  },
+  {
+    "id": "2022",
+    "image": "/Artwork/2022.png",
+    "title": "2022 Happy New Year! ",
+    "tool": "krita",
+    "caption": "年賀状"
+  },
+  {
+    "id": "sword_angel",
+    "image": "/Artwork/sword_angel.png",
+    "title": "剣神",
+    "tool": "krita",
+    "caption": "神という割にジャージを着用するなどかなり世俗的である"
+  },
+  {
+    "id": "tower_girl",
+    "image": "/Artwork/tower_girl.png",
+    "title": "鉄塔少女",
+    "tool": "Inkscape",
+    "caption": "鉄塔を右奥にもう一つ描いた方が良かったかも知れない"
+  },
+  {
+    "id": "the_end_of_fall",
+    "image": "/Artwork/the_end_of_fall.png",
+    "title": "The end of fall",
+    "tool": "Inkscape",
+    "caption": "紅葉の赤と湖面のシアンのコントラストを描きたかった"
+  },
+  {
+    "id": "RGBdragon",
+    "image": "/Artwork/RGBdragon.png",
+    "title": "RGBdragon",
+    "tool": "Inkscape",
+    "caption": "背景の和紙のようなテクスチャはPhotoshopで簡単に作ることができる"
+  },
+  {
+    "id": "skyblue",
+    "image": "/Artwork/skyblue.png",
+    "title": "skyblue",
+    "tool": "Adobe Illustrator",
+    "caption": "クジラの腹の線を五線譜に見立てるところから着想を広げた"
+  },
+  {
+    "id": "asoblock_dragon",
+    "image": "/Artwork/asoblock_dragon.jpg",
+    "title": "自在龍",
+    "tool": "アソブロック",
+    "caption": "可動性と強度を両立する（多分）オリジナルの方法を用いている"
+  },
+  {
+    "id": "dragonfly",
+    "image": "/Artwork/dragonfly.jpeg",
+    "title": "トンボ型ロボット",
+    "tool": "ボールペン",
+    "caption": "スタイリッシュかつ愛嬌のあるデザインを目指した"
+  },
+  {
+    "id": "blazing_leaves",
+    "image": "/Artwork/blazing_leaves.jpeg",
+    "title": "Blazing leaves",
+    "tool": "アクリルガッシュ",
+    "caption": "高校生国際美術展に応募したが、特に表彰などはされなかった"
+  }
+]
