@@ -60,9 +60,6 @@ export default {
           blank: true,
         },
       ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
     };
   },
 };

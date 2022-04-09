@@ -1,10 +1,7 @@
 <template>
-              <v-list>
-                <v-list-item class="justify-center">
-                  <h2>Calendar</h2>
-                </v-list-item>
-                <v-list-item class="px-0" >
-                  <v-calendar color="red"   />
+              <v-list app>
+                <v-list-item style="padding:0">
+                  <a class="twitter-timeline" data-width="100%" data-height="400" href="https://twitter.com/omemoji_itf?ref_src=twsrc%5Etfw">Tweets by omemoji_itf</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </v-list-item>
               </v-list>
               

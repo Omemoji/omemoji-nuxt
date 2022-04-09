@@ -1,41 +1,32 @@
 <template>
-  <v-card style="padding: 12px;margin:0 0 15px">
+  <v-card class="pa-3 mb-3">
     <v-card
       outlined
       class="d-flex justify-center"
       width="100%"
       color="grey lighten-2"
     >
-      <v-img
-        alt="title"
-        src="/Artwork/the_end_of_fall.png"
-        :aspect-ratio="8 / 5"
-        contain
-      ></v-img>
+      <v-img src="/Artwork/RGBdragon.png" max-height="600px" contain></v-img>
     </v-card>
-    <v-card-title class="justify-center">
-      <h2>The end of fall</h2>
-    </v-card-title>
-            <p>
-          鮮やかな赤・シアンとモノトーンの背景のコントラストをコンセプトとした作品
-        </p>
-    <hr style="margin: 0 0px 15px" />
-    <ul>
-      <li>
-        <h3>Category</h3>
-        <p>Artwork</p>
-      </li>
-      <li>
-        <h3>Tools</h3>
-        <p>Inkscape</p>
-      </li>
-      <li>
-        <h3>Caption</h3>
-        <p>
-          鮮やかな赤・シアンとモノトーンの背景のコントラストをコンセプトとした作品
-        </p>
-      </li>
-    </ul>
+    <v-card class="mt-3 pa-3" outlined>
+      <v-card-title class="justify-center">
+        <h2>The end of fall</h2>
+      </v-card-title>
+      <p>
+        鮮やかな赤・シアンとモノトーンの背景のコントラストをコンセプトとした作品
+      </p>
+      <hr class="mb-3" />
+      <ul class="pa-0">
+        <li>
+          <h3>Category</h3>
+          <p>Artwork</p>
+        </li>
+        <li>
+          <h3>Tools</h3>
+          <p>Inkscape</p>
+        </li>
+      </ul>
+    </v-card>
   </v-card>
 </template>
 

@@ -1,10 +1,14 @@
 <template>
-  <v-list>
+  <v-list app>
     <v-list-item style="margin: 0" class="d-flex justify-center">
-      <v-img alt="omemoji" src="omemoji.png" style="max-width: 200px"> </v-img>
+      <v-img alt="omemoji" v-bind:src="omemoji_icon" style="max-width: 200px">
+      </v-img>
     </v-list-item>
-    <v-list-item  class="justify-center">
+    <v-list-item class="justify-center">
       <h2>omemoji</h2>
+    </v-list-item>
+    <v-list-item class="justify-center">
+      <p>A student of College of Information Science, University of Tsukuba.</p>
     </v-list-item>
     <hr />
     <v-list-item v-for="(page, i) in menus" :key="i" :to="page.to" router exact>
@@ -21,6 +25,7 @@
 export default {
   data() {
     return {
+      omemoji_icon: require("@/static/omemoji.png"),
       menu: false,
       fixed: false,
       menus: [
@@ -29,16 +34,6 @@ export default {
           title: "Home",
           to: "/",
           blank: true,
-        },
-        {
-          icon: "mdi-brush",
-          title: "The end of fall",
-          to: "/the_end_of_fall",
-        },
-        {
-          icon: "mdi-alert-circle",
-          title: "Error test",
-          to: "/error",
         },
       ],
       miniVariant: false,

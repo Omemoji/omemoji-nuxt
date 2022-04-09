@@ -34,7 +34,7 @@
       >
         {{ "mdi-menu" }}
       </v-icon>
-      <v-spacer v-if="$vuetify.breakpoint.width < right_width"></v-spacer>
+      <v-spacer v-if="$vuetify.breakpoint.width < left_width"></v-spacer>
       <NuxtLink class="white--text" style="text-decoration: none" to="/">
         <h1>
           <v-toolbar-title style="font-size: 32px" v-text="title" />
@@ -42,7 +42,7 @@
       </NuxtLink>
       <v-spacer></v-spacer>
       <v-icon
-        v-if="$vuetify.breakpoint.xs"
+        v-if="$vuetify.breakpoint.width < right_width"
         @click.stop="drawer = !drawer"
         color="#ffffff"
         class=""
@@ -56,12 +56,7 @@
     <v-main>
       <v-container style="padding: 0px">
         <v-row justify="center" class="d-flex" no-gutters>
-          <v-col
-            cols="3"
-            v-if="$vuetify.breakpoint.width >= left_width"
-            app
-            style="width: 300px"
-          >
+          <v-col cols="3" v-if="$vuetify.breakpoint.width >= left_width" app>
             <v-navigation-drawer
               permanent
               style="padding: 6px 0px 0; margin-left: auto"
@@ -72,18 +67,27 @@
           </v-col>
           <v-col
             app
-            class=""
-            style="padding: 12px; margin: 0px; max-width: 960px"
+            style="padding: 12px; margin: 0px"
+            v-if="$vuetify.breakpoint.width < left_width"
           >
             <Nuxt />
             <gallery />
           </v-col>
           <v-col
-            cols="3"
-            v-if="$vuetify.breakpoint.width >= right_width"
+            cols="8"
             app
-            style="width: 300px"
+            style="padding: 12px; margin: 0px"
+            v-else-if="$vuetify.breakpoint.width < right_width"
           >
+            <Nuxt />
+            <gallery />
+          </v-col>
+          <v-col cols="6" app style="padding: 12px; margin: 0px" v-else>
+            <Nuxt />
+            <gallery />
+          </v-col>
+
+          <v-col cols="3" v-if="$vuetify.breakpoint.width >= right_width" app>
             <v-navigation-drawer permanent right style="padding: 6px 0px 0">
               <right-drawer-list />
             </v-navigation-drawer>
@@ -125,7 +129,7 @@ export default {
       drawer: false,
       menu: false,
       fixed: false,
-      left_width: 900,
+      left_width: 860,
       right_width: 1400,
       miniVariant: false,
       right: true,
