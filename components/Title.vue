@@ -1,6 +1,6 @@
 <template>
       <v-card outlined class="d-flex justify-center">
-         <v-img class="title " alt="title" src="/Title.png" />
+         <img class="title " alt="title" src="/Title.png" />
       </v-card>
 </template>
 

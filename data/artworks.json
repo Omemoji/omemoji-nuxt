@@ -1,5 +1,12 @@
 [
   {
+    "id": "dress",
+    "image": "/Artwork/dress.png",
+    "title": "A beautiful boy",
+    "tool": "krita",
+    "caption": "黒いドレスを着た少年"
+  },
+  {
     "id": "rainbow_dragon",
     "image": "/Artwork/rainbow_dragon.png",
     "title": "虹龍",
